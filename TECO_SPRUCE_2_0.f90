@@ -419,7 +419,9 @@ program TECO_MCMC
     write(88,*) "melt,snow_dsim,snow_in,ta"     
 ! ***************************************************************************************    
      call getarg(5,MCMCargu)
+     write(*,*) "test 5-1:", MCMCargu,do_co2_da
      read(MCMCargu,'(i1)') do_co2_da
+     write(*,*) "test 5-2:", MCMCargu,do_co2_da
 !    MCMC = 1    ! will be eventually totally replaced by    do_co2_da
 
      call getarg(6,DAparfile)
@@ -428,6 +430,8 @@ program TECO_MCMC
 
 !    if(MCMC.eq.1) GOTO 100
 !chang edited_060618  
+! ZJ: test MCMC
+    write(*,*) "MCMC:", MCMC, do_co2_da
     if (do_co2_da.eq.1) GOTO 100
     if(MCMC.eq.2) GOTO 150
 
